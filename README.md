@@ -1,33 +1,32 @@
-# Laravel Role Permission Management System - Laravel `7.x` `9.x`
+# Laravel Role Permission Management System - Laravel `8.x` `9.x`
 
-A task managment project which manage Role, Permissions , task , and every actions of your Laravel application. A complete solution for Role based Access Control in Laravel.
-
-
-Username - superadmin@gmail.com
+A project which manage Role, Permissions , Tasks and every actions of your Laravel application. 
+**Live Demo:** http://laravel-role.herokuapp.com
+```
+Username - super@gmail.com
 password - 12345678
 ```
-> **Note:** Don't try to modify the Super Admin (Role & admin) data.
+> **Note:** Don't try to modify the Super Admin (Role & admin) data, just for Heroku deployment.
 
 ## Requirements:
 - Laravel `8.x` | `9.7`
-- Spatie role permission package  `5.11`
-- Laravel ui  `3.x`
+- Spatie role permission package  `5.5`
 
 
 
 
-- Laravel `8.7` & PHP - `7.x`
+- Laravel `9.7` & PHP - `8.x`
 
 
 ## Project Setup
 Git clone -
 ```console
-git clone https://github.com/AliSami6/task_management.git
+git clone https://github.com/AliSami6/interview-task.git
 ```
 
 Go to project folder -
 ```console
-cd task_management
+cd interview-task
 ```
 
 Install Laravel Dependencies -
@@ -35,7 +34,7 @@ Install Laravel Dependencies -
 composer install
 ```
 
-Create database called - `task_management`
+Create database called - `interview_task`
 
 Create `.env` file by copying `.env.example` file
 
@@ -54,13 +53,12 @@ Run Project -
 php artisan serve
 ```
 
-Since, there is any problem to seeder, Please import the .sql file directly - https://github.com/AliSami6/task_management/blob/master/database/sql/task_management.sql
 
 So, You've got the project of Laravel Role & Permission Management on your http://localhost:8000
 
 ## How it works
 1. Login using Super Admin Credential -
-    1. Username - `superadmin@gmail.com`
+    1. Username - `super@gmail.com`
     1. Password - `12345678`
 2. Create Admin
 3. Create Role
@@ -69,11 +67,8 @@ So, You've got the project of Laravel Role & Permission Management on your http:
 6. Check by login with the new credentials.
 7. If you've not enough permission to do any task, you'll get a warning message.
 
-## Learn More & Discussion
-https://www.allphptricks.com/simple-laravel-10-user-roles-and-permissions/?fbclid=IwAR17TwT7Tt3RSz6VYXKmWBSEPXxKbPrYOVuy78k-VYccyfoA8Vcup9TG1Rc
 
 
 
-## Wanna talk with me
-Please mail me at - alisamicse320@gmail.com
-
+## Contribution
+Contribution is open. Create Pull-request and I'll add it to the project if it's good enough.
