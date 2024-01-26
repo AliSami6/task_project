@@ -11,12 +11,10 @@ password - 12345678
 ## Requirements:
 - Laravel `8.x` | `9.7`
 - Spatie role permission package  `5.11`
+- Laravel ui  `3.x`
 
 
-## Versions:
-- Laravel `8.x` & PHP -`7.x`
-    - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/Laravel7.x
-    - Branch - https://github.com/ManiruzzamanAkash/laravel-role/tree/Laravel7.x
+
 
 - Laravel `8.7` & PHP - `7.x`
 
@@ -24,12 +22,12 @@ password - 12345678
 ## Project Setup
 Git clone -
 ```console
-git clone https://github.com/ManiruzzamanAkash/laravel-role.git
+git clone https://github.com/AliSami6/task_management.git
 ```
 
 Go to project folder -
 ```console
-cd laravel-role
+cd task_management
 ```
 
 Install Laravel Dependencies -
@@ -37,7 +35,7 @@ Install Laravel Dependencies -
 composer install
 ```
 
-Create database called - `laravel_role`
+Create database called - `task_management`
 
 Create `.env` file by copying `.env.example` file
 
@@ -56,13 +54,13 @@ Run Project -
 php artisan serve
 ```
 
-Since, there is any problem to seeder, Please import the .sql file directly - https://github.com/ManiruzzamanAkash/laravel-role/blob/master/database/sql/laravel_role.sql
+Since, there is any problem to seeder, Please import the .sql file directly - https://github.com/AliSami6/task_management/blob/master/database/sql/task_management.sql
 
 So, You've got the project of Laravel Role & Permission Management on your http://localhost:8000
 
 ## How it works
 1. Login using Super Admin Credential -
-    1. Username - `superadmin`
+    1. Username - `superadmin@gmail.com`
     1. Password - `12345678`
 2. Create Admin
 3. Create Role
@@ -72,7 +70,7 @@ So, You've got the project of Laravel Role & Permission Management on your http:
 7. If you've not enough permission to do any task, you'll get a warning message.
 
 ## Learn More & Discussion
-https://devsenv.com/tutorials/laravel-role-permission-management-system-full-example-with-source-code
+https://www.allphptricks.com/simple-laravel-10-user-roles-and-permissions/?fbclid=IwAR17TwT7Tt3RSz6VYXKmWBSEPXxKbPrYOVuy78k-VYccyfoA8Vcup9TG1Rc
 
 
 
