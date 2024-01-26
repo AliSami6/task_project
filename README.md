@@ -1,6 +1,6 @@
 # Laravel Role Permission Management System - Laravel `8.x` `9.x`
 
-A project which manage Role, Permissions , Tasks and every actions of your Laravel application. 
+A task  managment project which manage Role, Permissions , Tasks and every actions of your Laravel application. 
 
 ```
 Username - super@gmail.com
@@ -48,7 +48,7 @@ Migrate Database with seeder -
 php artisan migrate:refresh --seed
 ```
 
-Run Project -
+Run Project not mendatory -
 ```php
 php artisan serve
 ```
