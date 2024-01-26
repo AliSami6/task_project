@@ -45,7 +45,7 @@ php artisan key:generate
 
 Migrate Database with seeder -
 ```console
-php artisan migrate --seed
+php artisan migrate:refresh --seed
 ```
 
 Run Project -
