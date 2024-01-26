@@ -33,8 +33,8 @@ Install Laravel Dependencies -
 ```console
 composer install
 ```
-
-Create database called - `task_project`
+. database sql file include in database->sql->task_management.sql
+Create database called - `task_management`
 
 Create `.env` file by copying `.env.example` file
 
