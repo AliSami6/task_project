@@ -65,7 +65,8 @@ So, You've got the project of task Management on your http://127.0.0.1:8000/admi
 4. Assign Permission to Roles
 5. Assign Multiple Role to an admin
 6. Check by login with the new credentials.
-7. If you've not enough permission to do any task, you'll get a warning message.
+7. Create task.
+8. If you've not enough permission to do any task, you'll get a warning message.
 
 
 
