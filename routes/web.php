@@ -1,6 +1,9 @@
 <?php
 
+use Backend\DashboardController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,27 +22,32 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'HomeController@redirectAdmin')->name('index');
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'App\Http\Controllers\HomeController@redirectAdmin')->name('index');
+Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 /**
  * Admin routes
  */
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', 'Backend\DashboardController@index')->name('admin.dashboard');
-    Route::resource('roles', 'Backend\RolesController', ['names' => 'admin.roles']);
-    Route::resource('users', 'Backend\UsersController', ['names' => 'admin.users']);
-    Route::resource('admins', 'Backend\AdminsController', ['names' => 'admin.admins']);
+    Route::get('/', 'App\Http\Controllers\Backend\DashboardController@index')->name('admin.dashboard');
+    Route::resource('roles', 'App\Http\Controllers\Backend\RolesController', ['names' => 'admin.roles']);
+    Route::resource('users', 'App\Http\Controllers\Backend\UsersController', ['names' => 'admin.users']);
+    Route::resource('admins', 'App\Http\Controllers\Backend\AdminsController', ['names' => 'admin.admins']);
+    Route::resource('tasks', 'App\Http\Controllers\Backend\TasksController', ['names' => 'admin.tasks']);
+  Route::patch('/tasks/{task}', 'App\Http\Controllers\Backend\TasksController@updateStatus')->name('admin.tasks.updateStatus');
+// routes/web.php or routes/admin.php
 
+Route::put('tasks/{id}', 'App\Http\Controllers\Backend\TasksController@update')->name('admin.tasks.update');
 
     // Login Routes
-    Route::get('/login', 'Backend\Auth\LoginController@showLoginForm')->name('admin.login');
-    Route::post('/login/submit', 'Backend\Auth\LoginController@login')->name('admin.login.submit');
+    Route::get('/login', 'App\Http\Controllers\Backend\Auth\LoginController@showLoginForm')->name('admin.login');
+    Route::post('/login/submit', 'App\Http\Controllers\Backend\Auth\LoginController@login')->name('admin.login.submit');
 
     // Logout Routes
-    Route::post('/logout/submit', 'Backend\Auth\LoginController@logout')->name('admin.logout.submit');
+    Route::post('/logout/submit', 'App\Http\Controllers\Backend\Auth\LoginController@logout')->name('admin.logout.submit');
 
     // Forget Password Routes
-    Route::get('/password/reset', 'Backend\Auth\ForgetPasswordController@showLinkRequestForm')->name('admin.password.request');
-    Route::post('/password/reset/submit', 'Backend\Auth\ForgetPasswordController@reset')->name('admin.password.update');
+    Route::get('/password/reset', 'App\Http\Controllers\Backend\Auth\ForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
+    Route::post('/password/reset/submit', 'App\Http\Controllers\Backend\Auth\ForgotPasswordController@reset')->name('admin.password.update');
 });

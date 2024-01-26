@@ -102,8 +102,8 @@ class UsersController extends Controller
 
         // Validation Data
         $request->validate([
-            'name' => 'required|max:50',
-            'email' => 'required|max:100|email|unique:users,email,' . $id,
+            'name' => 'max:50',
+            'email' => 'max:100|email|unique:users,email,' . $id,
             'password' => 'nullable|min:6|confirmed',
         ]);
 

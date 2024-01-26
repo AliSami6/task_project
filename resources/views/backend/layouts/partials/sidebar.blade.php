@@ -39,8 +39,7 @@
                         </ul>
                     </li>
                     @endif
-
-                    
+       
                     @if ($usr->can('admin.create') || $usr->can('admin.view') ||  $usr->can('admin.edit') ||  $usr->can('admin.delete'))
                     <li>
                         <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-user"></i><span>
@@ -58,6 +57,25 @@
                         </ul>
                     </li>
                     @endif
+                    
+                    @if ($usr->can('task.create') || $usr->can('task.view') ||  $usr->can('task.edit') ||  $usr->can('task.delete'))
+                    <li>
+                        <a href="javascript:void(0)" aria-expanded="true"><i class="fa fa-mouse-pointer"></i><span>
+                            Tasks
+                        </span></a>
+                        <ul class="collapse {{ Route::is('admin.tasks.create') || Route::is('admin.tasks.index') || Route::is('admin.tasks.edit') || Route::is('admin.tasks.show') ? 'in' : '' }}">
+                            
+                            @if ($usr->can('task.view'))
+                                <li class="{{ Route::is('admin.tasks.index')  || Route::is('admin.tasks.edit') ? 'active' : '' }}"><a href="{{ route('admin.tasks.index') }}">All Tasks</a></li>
+                            @endif
+
+                            @if ($usr->can('task.create'))
+                                <li class="{{ Route::is('admin.tasks.create')  ? 'active' : '' }}"><a href="{{ route('admin.tasks.create') }}">Create Task</a></li>
+                            @endif
+                        </ul>
+                    </li>
+                    @endif
+                 
 
                 </ul>
             </nav>
