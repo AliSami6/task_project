@@ -54,7 +54,7 @@ php artisan serve
 ```
 
 
-So, You've got the project of Laravel Role & Permission Management on your http://localhost:8000/admin/login
+So, You've got the project of task Management on your http://127.0.0.1:8000/admin/login
 
 ## How it works
 1. Login using Super Admin Credential -
