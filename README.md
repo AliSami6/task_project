@@ -1,25 +1,24 @@
 # Laravel Role Permission Management System - Laravel `7.x` `9.x`
 
-A project which manage Role, Permissions and every actions of your Laravel application. A complete solution for Role based Access Control in Laravel.
+A task managment project which manage Role, Permissions , task , and every actions of your Laravel application. A complete solution for Role based Access Control in Laravel.
 
-**Live Demo:** http://laravel-role.herokuapp.com
-```
-Username - superadmin
+
+Username - superadmin@gmail.com
 password - 12345678
 ```
-> **Note:** Don't try to modify the Super Admin (Role & admin) data, just for Heroku deployment.
+> **Note:** Don't try to modify the Super Admin (Role & admin) data.
 
 ## Requirements:
-- Laravel `7.x` | `9.7`
-- Spatie role permission package  `3.1.3`
+- Laravel `8.x` | `9.7`
+- Spatie role permission package  `5.11`
 
 
 ## Versions:
-- Laravel `7.x` & PHP -`7.x`
+- Laravel `8.x` & PHP -`7.x`
     - Tag - https://github.com/ManiruzzamanAkash/laravel-role/releases/tag/Laravel7.x
     - Branch - https://github.com/ManiruzzamanAkash/laravel-role/tree/Laravel7.x
 
-- Laravel `9.7` & PHP - `8.x`
+- Laravel `8.7` & PHP - `7.x`
 
 
 ## Project Setup
